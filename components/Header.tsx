@@ -5,23 +5,18 @@ import { Button } from './ui/button'
 
 const Header = () => {
   return (
-    <div>
+    <div className='flex justify-between bg-white shadow-sm'>
         <Link href="/dashboard" className='text-2xl'>
-            Chat to <span className='text-indigo-600'>PDF</span>
-        </Link>
+        Chat to <span className='text-indigo-600'>PDF</span></Link>
         <SignedIn>
-            <div>
+            <div className='flex items-center space-x-2'>
+                <Button asChild variant="link" className='hidden md:flex'>
+                    <Link href="/dashboard/upgrade">Pricing</Link>
+                </Button>
                 {/* upgrade button */}
                 <UserButton/>
             </div>
         </SignedIn>
-        <div>
-            <Button asChild variant="link" className='hidden md:flex'>
-                <Link href="dashboard/upgrade">Pricing</Link>
-            </Button>
-            {/* upgrade button */}
-            <UserButton/>
-        </div>
     </div>
   )
 }
