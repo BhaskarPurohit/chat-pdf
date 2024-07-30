@@ -1,10 +1,9 @@
+import { ClerkLoaded } from '@clerk/nextjs'
 import React from 'react'
 
-const Dashboard = () => {
+const Dashboard = ({children}:{children:React.ReactNode}) => {
   return (
-    <div>
-
-    </div>
+   <div>dashboard</div>
   )
 }
 
