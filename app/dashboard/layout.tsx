@@ -5,9 +5,9 @@ import React from 'react'
 const layout = ({children}:{children:React.ReactNode}) => {
   return (
     <ClerkLoaded>
-    <div className='flex flex-col flex-1'>
+    <div className='flex flex-col flex-1 h-screen'>
         <Header/>
-        {children}
+        <main className='flex-1 overflow-y-auto'>{children}</main>
     </div>
 </ClerkLoaded>
   )
